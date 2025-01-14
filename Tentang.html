@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TENTANG</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .header {
+      background-color: #eb9e2a;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header img {
+    height: 70px;
+    width: auto;
+    border-radius: 15px;
+    border: 2px solid #afa7a7;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav a.active {
+      background-color: #fff;
+      color: #f39c12;
+      font-weight: 600;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      text-align: center;
+      position: relative;
+    }
+
+    .content h1:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #f39c12;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .content h2 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin: 30px 0 15px;
+    }
+
+    .content p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .content ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .content ul li {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .about-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .social-media a {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .social-media a i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    .social-media .whatsapp {
+      background-color: #25D366;
+    }
+
+    .social-media .instagram {
+      background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    }
+
+    .social-media .facebook {
+      background-color: #1877F2;
+    }
+
+    .social-media a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .social-media {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .social-media a {
+        width: 200px;
+        justify-content: center;
+      }
+    }
+
+
+    /* New styles for the content logo */
+    .about-logo {
+      display: block;
+      width: 200px;
+      height: auto;
+      margin: 0 auto 30px;
+      border-radius: 15px;
+      border: 3px solid #f39c12;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .about-logo:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 15px 20px;
+      }
+      
+      .nav {
+        display: none;
+      }
+      
+      .content {
+        padding: 0 15px;
+      }
+
+      .about-logo {
+        width: 150px;
+      }
+    }
+
+    .team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.team-member {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f39c12;
+    margin-bottom: 15px;
+  }
+
+  .cucu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Menyesuaikan agar lebih lebar */
+  margin: 30px auto;
+}
+
+.team-member.rizqu .team-photo {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #f39c12;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img alt="Logo Rasa Kita" src="Rasa Kita.jpg" class="logo" />
+    <div class="nav">
+      <a href="HomePage.html">HOME</a>
+      <a href="Menu.html">MAKANAN</a>
+      <a href="Minuman.html">MINUMAN</a>
+      <a href="Kue.html">KUE</a>
+      <a href="Tentang.html"class="active">TENTANG</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Tentang Kami</h1>
+    <div class="about-section">
+      <img alt="Logo Rasa Kita" src="Rasa Kita.jpg" class="about-logo" />
+      <p>Selamat datang di Rasa Kita — tempat di mana kelezatan dan kreativitas bertemu dalam setiap resep! Kami percaya bahwa masakan adalah bahasa universal yang menghubungkan kita semua, dan di Rasa Kita, kami ingin berbagi semangat memasak yang menyenangkan, praktis, dan penuh rasa.</p>
+      
+      <h2>Visi Kami</h2>
+      <p>Visi kami adalah untuk menjadi sumber inspirasi utama bagi setiap orang yang ingin menjelajahi dunia kuliner, baik pemula maupun koki berpengalaman...</p>
+      
+      <h2>Misi Kami</h2>
+      <p>Misi kami di Rasa Kita adalah menyediakan berbagai resep makanan yang sederhana namun penuh cita rasa...</p>
+      
+      <h2>Apa yang Kami Tawarkan?</h2>
+      <ul>
+        <li>Resep Harian: Solusi praktis untuk makan siang atau malam setiap hari.</li>
+        <li>Resep Spesial: Hidangan istimewa untuk acara tertentu atau hari spesial.</li>
+        <li>Resep Sehat: Pilihan makanan yang menyehatkan namun tetap lezat.</li>
+        <li>Resep Tradisional: Menyajikan cita rasa lokal dan warisan kuliner Nusantara.</li>
+        <li>Resep Indonesia: Mencicipi kelezatan masakan dari Seluruh Indonesia.</li>
+      </ul>
+      
+      <h2>Mengapa Memilih Rasa Kita?</h2>
+      <p>Resep yang Mudah diikuti, Bahan yang Terjangkau, Kreasi yang Variatif, Komunitas Penggemar Masakan.</p>
+      
+      <h2>Bergabunglah dengan Kami!</h2>
+      <p>Bergabunglah dengan komunitas Rasa Kita dan berbagi pengalaman memasak Anda!</p>
+      <div class="social-media">
+        <a href="#" class="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+        <a href="#" class="instagram">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="#" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+          Facebook
+        </a>
+      </div>
+      
+      <h2>Temukan Resep Terbaru Kami</h2>
+      <p>Jelajahi berbagai resep di Rasa Kita dan mulai petualangan kuliner Anda hari ini!</p>
+    </div>
+  
+    <!-- Bagian Siapa Kami -->
+    <h2>Siapakah Kami?</h2>
+<div class="team">
+  <!-- Bagian Rizqu -->
+  <div class="team-member rizqu">
+    <img src="rizqu3.jpg" alt="Rizqu" class="team-photo">
+    <h3>H. Rizqoelloh Darwaensyah 1923-2010</h3>
+    <p>Semua dimulai ketika Ua Rizqu memulai karir Kulinernya pada masa Pra-kemerdekaan, memasak untuk pasukan Heiho Jepang pada tahun 1940-an. Ua Rizqu adalah sosok yang memulai semuanya. Dengan kecintaannya pada kuliner Nusantara, sejak era Pra-kemerdekaan beliau mewariskan resep-resep autentik yang menjadi pondasi utama Rasa Kita, yang pada akhirnya diwariskan kepada cucu-cucunya.</p>
+  </div>
+
+  <!-- Barisan cucu-cucu -->
+  <div class="cucu-container">
+    <div class="team-member">
+      <img src="elang.jpg" alt="Elang" class="team-photo">
+      <h3>Elang</h3>
+      <p>Elang adalah Cucu pertama, ia berperan sebagai penjaga rasa tradisional dan inovator di dapur. Ia memastikan resep lama tetap hidup sambil menciptakan kreasi baru yang menarik.</p>
+    </div>
+    <div class="team-member">
+      <img src="farrel2.jpg" alt="Farrel" class="team-photo">
+      <h3>Farrel</h3>
+      <p>Farrel adalah Cucu ke-2 yang bertanggung jawab atas pengelolaan dan strategi Rasa Kita, membawa visi besar untuk memperkenalkan kuliner Nusantara ke dunia.</p>
+    </div>
+    <div class="team-member">
+      <img src="razcel.jpg" alt="Razcel" class="team-photo">
+      <h3>Razcel</h3>
+      <p>Razcel adalah Cucu ke-3, yang berperan sebagai penghubung kami dengan komunitas, berbagi cerita dan pengalaman kuliner yang menginspirasi.</p>
+    </div>
+    <div class="team-member">
+      <img src="julio2.jpg" alt="Julio" class="team-photo">
+      <h3>Julio</h3>
+      <p><p>Julio adalah Cucu ke-4, seorang Quality Checker di Rasa Kita yang bertugas memastikan resep autentik Nusantara yang kami sajikan tetap memenuhi standar kualitas dan keaslian rasa tradisional.</p>
+</p>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>

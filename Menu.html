@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAKANAN</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .header {
+  background-color: #eb9e2a;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header img {
+  height: 70px;
+  width: auto;
+  border-radius: 15px;
+  border: 2px solid #afa7a7;
+}
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .nav a.active {
+      background-color: #fff;
+      color: #f39c12;
+      font-weight: 600;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      text-align: center;
+      position: relative;
+    }
+
+    .content h1:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #f39c12;
+      margin: 15px auto;
+      border-radius: 2px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .grid-item a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .grid-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .grid-item .city-name {
+      padding: 15px;
+      text-align: center;
+      color: #2c3e50;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f39c12;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #e67e22;
+      transform: translateX(-5px);
+    }
+
+    .recipe-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 15px 20px;
+      }
+      
+      .nav {
+        display: none;
+      }
+      
+      .content {
+        padding: 0 15px;
+      }
+      
+      .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+    }
+    
+    .logo {
+  border-radius: 10px;
+  border: 2px solid #afa7a7;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img alt="Logo Rasa Kita" src="Rasa Kita.jpg" class="logo" />
+    <div class="nav">
+      <a href="HomePage.html">HOME</a>
+      <a href="Menu.html" class="active">MAKANAN</a>
+      <a href="Minuman.html">MINUMAN</a>
+      <a href="Kue.html">KUE</a>
+      <a href="Tentang.html">TENTANG</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Makanan Kota Populer</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="makanan/Jakarta.html">
+          <img alt="Jakarta city view" src="https://i.pinimg.com/originals/3e/a9/e0/3ea9e0311f698b6ddae37e44535b4fa3.jpg" />
+          <div class="city-name">JAKARTA</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Bogor.html">
+          <img alt="Bogor city view" src="https://i.pinimg.com/736x/f4/7d/24/f47d245bfb62d430b788de3f342da91a.jpg" />
+          <div class="city-name">BOGOR</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Bali.html">
+          <img alt="Bali city view" src="https://i.pinimg.com/736x/35/cf/2b/35cf2bfab87134d6ff87e3de9d296fd1.jpg" />
+          <div class="city-name">BALI</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Lombok.html">
+          <img alt="Lombok city view" src="https://thumbs.dreamstime.com/z/masjid-raya-hubbul-wathan-islamic-center-mataram-lombok-west-nusa-tenggara-indonesia-213073316.jpg" />
+          <div class="city-name">LOMBOK</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Aceh.html">
+          <img alt="Aceh city view" src="https://www.klikers.id/wp-content/uploads/2022/08/7.-Masjid-Baiturrahman-Aceh-2.jpg" />
+          <div class="city-name">ACEH</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Palembang.html">
+          <img alt="Palembang city view" src="https://i.pinimg.com/736x/4e/dd/4d/4edd4d948c2c069ef2b15cba2ac61bb6.jpg" />
+          <div class="city-name">PALEMBANG</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Padang.html">
+          <img alt="Padang city view" src="https://i.pinimg.com/736x/b4/a8/5b/b4a85b8d05d733127bedd18c80765e7c.jpg" />
+          <div class="city-name">PADANG</div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="makanan/Bangka Belitung.html">
+          <img alt="Bangka Belitung city view" src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1513774098/WhatsApp_Image_2017-12-18_at_19.08.38_tbvixh.jpg" />
+          <div class="city-name">BANGKA BELITUNG</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
